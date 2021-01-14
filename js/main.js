@@ -72,12 +72,47 @@ $(document).ready(function () {
         $(this).prev(".requirements__label").css("opacity", "0")
       })
 
-    //header burger 
 
-    $('.header__burger').click(function(event) {
+      // Helper function for add element box list in WOW
+    WOW.prototype.addBox = function(element) {
+        this.boxes.push(element);
+       };
+
+       // Init WOW.js and get instance
+      var wow = new WOW();
+      wow.init();
+
+     // Attach scrollSpy to .wow elements for detect view exit events,
+       // then reset elements and add again for animation
+    //     $('.wow').on('scrollSpy:exit', function() {
+    //    $(this).css({
+    //     'visibility': 'hidden',
+    //     'animation-name': 'none'
+    //    }).removeClass('animated');
+    //    wow.addBox(this);
+    //   }).scrollSpy();
+
+    //header burger 
+    let item = 0;
+    $('.header__burger').click(function() {
 		$('.header__burger,.header__menu').toggleClass('active');
-		$('body').toggleClass('lock');
-	});
+        $('body').toggleClass('lock');
+        
+        let itemList = $('.header__list > li');
+
+        if(item) {
+            itemList.removeClass('animated');
+            itemList.css({'visibility':'hidden','animation-name': 'none'});
+            item = 0;
+        }
+        else {
+            itemList.addClass('animated');
+            itemList.css({'visibility' : 'visible', 'animation-name':'bounceInUp'});
+            item = 1;
+        }
+    });
+    
+    
 
     let linkButton = $('.header-message');
     let AlreadyDone = false;
@@ -94,15 +129,23 @@ $(document).ready(function () {
 
     $('.portfolio__item:last-child').hover(
         function() {
-            $( this ).prev().animate({width: 'toggle'}, "400");
-            
+            $( this ).prev().css("display", "none");
+            $( this ).css("position", "absolute");
+            $( this ).css("width", "calc(100% *2 / 3)");
+        },
+        function() {
+            $( this ).css("width", "calc(100% / 3)");
+            $( this ).prev().css("display", "block");
+            // $( this ).css("position", "static");
         }
       );
 
       $("#link1").on("click", function (event) {
         event.preventDefault();
         let id  = $(this).attr('href'),
-            top = $(id).offset().top;
+            top = $(id).offset().top - 20;
         $('body,html').animate({scrollTop: top}, 400);
     });
+
+    
 });

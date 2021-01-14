@@ -38,26 +38,30 @@
                     <span></span>
                 </div>
                 <div class="header__menu">
-                    <ul class="header__list">
-                        <li>
-                            <a href="#" class="header__link">HOME</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__link">WHAT WE DO</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__link">WHO WE ARE</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__link">PORTFOLIO</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__link">BLOG</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__link">GET IN TOUCH</a>
-                        </li>
-                    </ul>
+                    <div class="container">
+                        <div class="header__menu-wrapper">
+                            <ul class="header__list">
+                                <li>
+                                    <a href="#" class="header__link">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="header__link">WHAT WE DO</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="header__link">WHO WE ARE</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="header__link">PORTFOLIO</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="header__link">BLOG</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="header__link">GET IN TOUCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,7 +94,7 @@
                     <div class="service">
                         <a id="id1" class="anchor"></a>
                         <h2 class="main-title service-title">Услуги</h2>
-                        <h4 class="main-subtitle service-subtitle">Больше услуг можно узнать у нашего <a href="#">менеджера</a></h4>
+                        <h4 class="main-subtitle service-subtitle">Больше услуг можно узнать у нашего <a href="#" class="main-link">менеджера</a></h4>
                         <div class="service-wrapper">
                             <div class="service__item wow fadeInLeftBig animate__slow">
                                 <img src="img/icons/buildings1.webp" alt="">
@@ -116,13 +120,13 @@
             <section class="section-design">
                 <div class="container">
                     <div class="design">
-                        <div class="design__left">
+                        <div class="design__left wow bounceInLeft animate__slow">
                             <h2 class="main-title service-title text-start">Адаптивный</h2>
                             <h3 class="main-title-type-2 design-subtitle text-start">веб-дизайн</h3>
                             <p>Адаптивный дизайн сайта – это конфигурация, при которой серверо Адаптивный дизайн сайта – это конфигурация, при которой серверо Адаптивный дизайн сайта – это конфигурация, при которой серверо Адаптивный дизайн сайта – это конфигурация, при которой серверо</p>
                             <a href="#" class="show-detail">Подробнее</a>
                         </div>
-                        <div class="design__right">
+                        <div class="design__right wow bounceInRight animate__slow">
                             <img src="img/design.webp" alt="">
                         </div>
                     </div>
@@ -138,33 +142,48 @@
                             <div class="portfolio__item">
                                 <img src="img/icons/port1.png" alt="">
                                 <h4 class="portfolio-title portfolio-pad"><span>UI/UX</span>, концептуализация и управление проектами</h4>
-                                <div class="img__item ui1">
+                                <div class="img__item">
                                     <img src="img/ui1.png" alt="">
                                 </div>
-                                
+                                <div class="port-block">
+                                    <a href="#" class="wrapper-portfolio__link">
+                                        <span class="portfolio__link">Подробнее</span>
+                                        <span class="portfolio-span"></span>
+                                    </a>
+                                </div>
                             </div>
                             <div class="portfolio__item">
                                 <img src="img/icons/port2.png" alt="">
                                 <h4 class="portfolio-title portfolio-pad"><span>UI/UX</span>, концептуализация и управление проектами</h4>
-                                <div class="img__item ui2">
+                                <div class="img__item">
                                     <img src="img/ui2.png" alt="">
                                 </div>
-                                
+                                <div class="port-block">
+                                    <a href="#" class="wrapper-portfolio__link">
+                                        <span class="portfolio__link">Подробнее</span>
+                                        <span class="portfolio-span"></span>
+                                    </a>
+                                </div>
                             </div>
                             <div class="portfolio__item">
                                 <img src="img/icons/port3.png" alt="">
                                 <h4 class="portfolio-title portfolio-pad"><span>UI/UX</span>, концептуализация и управление проектами</h4>
-                                <div class="img__item ui3">
+                                <div class="img__item">
                                     <img src="img/ui3.png" alt="">
                                 </div>
-                                
+                                <div class="port-block">
+                                    <a href="#" class="wrapper-portfolio__link">
+                                        <span class="portfolio__link">Подробнее</span>
+                                        <span class="portfolio-span"></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section-blog">
+            <section class="section-blog wow bounceInUp animate__slow">
                 <div class="container">
                     <div class="blog">
                         <h2 class="main-title blog-title-bottom">Блог</h2>
@@ -373,6 +392,7 @@
     
     <!-- Подключеине скриптов -->
     <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/scrollspy.js"></script>
     <script src="libs/wow/wow.min.js"></script>
     <script>
         new WOW().init();
