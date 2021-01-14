@@ -499,6 +499,16 @@ body.lock {
   align-items: center;
 }
 
+.header__list .header__link-mail {
+  color: #3d3935;
+}
+.header__list .header__link-mail::before {
+  background: #3d3935;
+}
+.header__list .icons-mail {
+  fill: #3d3935 !important;
+}
+
 input.error,
 textarea.error {
   border-color: red;
@@ -1177,6 +1187,10 @@ body.lock1 {
   }
 }
 @media (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+
   .main-title {
     font-size: 40px;
   }
