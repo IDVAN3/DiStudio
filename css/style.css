@@ -1194,6 +1194,11 @@ body.lock1 {
   }
 }
 @media (max-width: 768px) {
+  .submenu {
+    padding: 5px 5px 5px 11px;
+    margin: 0;
+  }
+
   .pc {
     display: none;
   }
