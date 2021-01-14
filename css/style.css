@@ -70,7 +70,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  min-width: 360px;
+  min-width: 320px;
   width: 100%;
   background: #fff;
   color: #343434;
@@ -573,6 +573,7 @@ textarea.error {
 .service-wrapper {
   display: flex;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 .service__item {
   padding-top: 55px;
@@ -590,6 +591,10 @@ textarea.error {
   font-size: 16px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.section-blog {
+  overflow-x: hidden;
 }
 
 .js-select-main {
@@ -639,6 +644,7 @@ textarea.error {
 .design {
   display: flex;
   padding-bottom: 150px;
+  overflow-x: hidden;
 }
 .design__right {
   margin-top: 50px;
@@ -891,6 +897,7 @@ textarea.error {
 }
 .footer-top {
   display: flex;
+  overflow-x: hidden;
 }
 .footer-top__item {
   flex: 0 0 calc(100% / 3);
