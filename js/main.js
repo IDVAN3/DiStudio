@@ -126,19 +126,20 @@ $(document).ready(function () {
             AlreadyDone = true; 
         }
     });
-
-    $('.portfolio__item:last-child').hover(
-        function() {
-            $( this ).prev().css("display", "none");
-            $( this ).css("position", "absolute");
-            $( this ).css("width", "calc(100% *2 / 3)");
-        },
-        function() {
-            $( this ).css("width", "calc(100% / 3)");
-            $( this ).prev().css("display", "block");
-            // $( this ).css("position", "static");
-        }
-      );
+    if($(window).width() > 992) {
+        $('.portfolio__item:last-child').hover(
+            function() {
+                $( this ).prev().css("display", "none");
+                $( this ).css("position", "absolute");
+                $( this ).css("width", "calc(100% *2 / 3)");
+            },
+            function() {
+                $( this ).css("width", "calc(100% / 3)");
+                $( this ).prev().css("display", "block");
+                // $( this ).css("position", "static");
+            }
+        );
+    }
 
       $("#link1").on("click", function (event) {
         event.preventDefault();
