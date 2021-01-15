@@ -115,16 +115,23 @@ $(document).ready(function () {
     
 
     let linkButton = $('.header-message');
+    let abs = $('.text-abs-port');
     let AlreadyDone = false;
     $(window).scroll(function() {
         let scroll = $(window).scrollTop() + $(window).height();
 
-        let offset = linkButton.offset().top + $(window).height()
+        let offset = linkButton.offset().top + $(window).height();
 
         if (!AlreadyDone && scroll > offset) {
             linkButton.css("position", "fixed");
             AlreadyDone = true; 
         }
+        let absScroll = abs.offset().top + $(window).height();
+        if(scroll > absScroll) {
+            abs.css("transform", "rotate(-90deg) translate(calc(-50% + 70px), -300%)")
+        }
+        
+        
     });
     if($(window).width() > 992) {
         $('.portfolio__item:last-child').hover(
