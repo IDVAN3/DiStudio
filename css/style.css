@@ -334,6 +334,7 @@ li.counter li:before {
 }
 .header__menu-wrapper {
   display: flex;
+  justify-content: space-between;
 }
 .header-top {
   display: flex;
@@ -500,14 +501,37 @@ body.lock {
   align-items: center;
 }
 
-.header__list .header__link-mail {
-  color: #3d3935;
+.header__info {
+  max-width: 300px;
 }
-.header__list .header__link-mail::before {
+.header__info .header__link-mail {
+  color: #3d3935;
+  margin-bottom: 15px;
+}
+.header__info .header__link-mail::before {
   background: #3d3935;
 }
-.header__list .icons-mail {
+.header__info .icons-mail {
   fill: #3d3935 !important;
+}
+.header__info .footer__link {
+  color: #3d3935;
+  display: block;
+  margin-bottom: 15px;
+}
+.header__info .footer__link::before {
+  background: #3d3935;
+}
+.header__info .icons-tel {
+  fill: #3d3935 !important;
+}
+.header__info p {
+  padding-bottom: 15px;
+}
+
+.info-title {
+  font-size: 30px;
+  padding-bottom: 10px;
 }
 
 input.error,
@@ -667,6 +691,7 @@ textarea.error {
   line-height: 1.5;
   max-width: 330px;
   padding-bottom: 30px;
+  background: #ffffff;
 }
 
 .blog {
@@ -894,6 +919,7 @@ textarea.error {
   position: absolute;
   background-color: #0078ff;
   border-radius: 5px;
+  z-index: -1;
 }
 .square-0 {
   left: 120px;
@@ -1362,6 +1388,11 @@ body.lock1 {
   padding-left: 10px;
 }
 
+@media (max-width: 1900px) {
+  .square-34 {
+    left: 100px;
+  }
+}
 @media (max-width: 1600px) {
   .square-33 {
     left: 10px;
@@ -1389,6 +1420,10 @@ body.lock1 {
   /**/
 }
 @media (max-width: 992px) {
+  .blog, .portfolio, .design, .service {
+    background: #ffffff;
+  }
+
   .blog__wrapper-list {
     flex-direction: column;
   }
@@ -1463,6 +1498,42 @@ body.lock1 {
   }
 }
 @media (max-width: 768px) {
+  .info-title {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .header__info {
+    max-width: 300px;
+  }
+  .header__info .footer__link {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .header__info .icons-tel {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .header__info p {
+    padding-bottom: 10px;
+  }
+
+  .header__menu {
+    padding: 60px 0px 10px 0px;
+  }
+
+  .square {
+    background: none;
+  }
+  .square-1 {
+    left: 10px;
+    bottom: 110px;
+  }
+  .square-2 {
+    left: 30px;
+    bottom: 40px;
+  }
+
   .header-arrow {
     width: 25px !important;
     height: 25px !important;
@@ -1589,6 +1660,11 @@ body.lock1 {
 
   .header__link {
     font-size: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .header__menu-wrapper {
+    flex-direction: column;
   }
 }
 @media (max-width: 480px) {

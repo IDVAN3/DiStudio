@@ -82,15 +82,15 @@ $(document).ready(function () {
       var wow = new WOW();
       wow.init();
 
-     // Attach scrollSpy to .wow elements for detect view exit events,
-       // then reset elements and add again for animation
-    //     $('.wow').on('scrollSpy:exit', function() {
-    //    $(this).css({
-    //     'visibility': 'hidden',
-    //     'animation-name': 'none'
-    //    }).removeClass('animated');
-    //    wow.addBox(this);
-    //   }).scrollSpy();
+    //  Attach scrollSpy to .wow elements for detect view exit events,
+    //    then reset elements and add again for animation
+        $('.square').on('scrollSpy:exit', function() {
+       $(this).css({
+        'visibility': 'hidden',
+        'animation-name': 'none'
+       }).removeClass('animated');
+       wow.addBox(this);
+      }).scrollSpy();
 
     //header burger 
     let item = 0;
