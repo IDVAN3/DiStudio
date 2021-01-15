@@ -1,20 +1,6 @@
 
 'use strict'
 $(document).ready(function () {
-
-    /*ibg*/
-
-    function ibg() {
-        $.each($('.ibg'), function (index, val) {
-            if ($(this).find('img').length > 0) {
-                let src_img = $(this).find('img').attr('src');
-                $(this).css('backgroundImage', 'url("' + src_img + '")');
-            }
-        });
-    }
-
-    ibg();
-
     /*попап*/
 
     function openPopup(id) {
